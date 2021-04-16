@@ -1,0 +1,34 @@
+app: label-studio
+namespace: default
+replicas: 1
+
+enableReadinessProbe: true
+enableLivenessProbe: true
+resourceRestrictions: true
+
+req:
+  cpu: 160m
+  mem: 512Mi
+limit:
+  cpu: 320m
+  mem: 1024Mi
+
+image:
+  repo: heartexlabs/label-studio
+  TAG: latest
+  pullpolicy: IfNotPresent 
+
+volumes:
+  path: /label-studio/data
+  name: label-studio-volume
+
+name: label-studio
+
+PORT: 8080
+PROTOCOL: TCP
+NODEPORT: 31105
+serviceType: NodePort
+
+delays:
+  initial: 300
+  period: 20

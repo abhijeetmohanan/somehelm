@@ -29,6 +29,6 @@ PROTOCOL: TCP
 NODEPORT: 31105
 serviceType: NodePort
 
-delays:
+delay:
   initial: 300
   period: 20

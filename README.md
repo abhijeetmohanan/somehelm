@@ -2,6 +2,7 @@
 
  > file hirechry
  
+ ```
  .
  |__ values.yaml
  |__ chart.yaml
@@ -11,3 +12,4 @@
         |__ Deploymnet.yaml
         |
         |__ Service.yaml
+        ```
